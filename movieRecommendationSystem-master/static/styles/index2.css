@@ -1,0 +1,35 @@
+*{
+    color:white;
+}
+body{
+    /*background-image: url('https://www.whats-on-netflix.com/wp-content/uploads/2021/08/netflix-library-photo-scaled.jpg');*/
+    background-image:url('https://ak.picdn.net/shutterstock/videos/1033903442/thumb/1.jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /*backdrop-filter: blur(3px);*/
+    backdrop-filter: cover;
+    overflow-y: scroll;
+    }
+body::-webkit-scrollbar {
+    display: none;
+}
+.row{
+    height: 80px;
+    margin-top: 350px;
+}
+form{
+    display: flex;
+    flex-direction: row;
+}
+form .input2{
+    height: 40px;
+    padding:2px;
+    border-radius: 5px;
+}
+
+form .submit{
+    height: 40px;
+}

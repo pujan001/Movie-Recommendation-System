@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Similar Movies</title>
+    </head>
+    <body>
+        <form action="\reccomend" method="post">
+            <h5>Enter Your Movie Name</h5>
+            <input type="text" name="name" id="name" value="iron">
+            <br>
+            <br>
+            <input type="submit" value="Search">
+        </form>
+        <br>
+        <div id="demo">
+        <!--   {% for i in recc%}
+            <li>{{i}}</li>
+            {% endfor %}-->
+        </div>
+        {% block javascript %}
+        <!--<script>
+            function fun(data){
+                temp='';
+                if(data!=''){
+                    for(let i=0;i<data.length;i++){
+                        temp+=data[i]+'<br>';
+                    }
+                }
+                console.log(temp);
+                document.getElementById('demo').innerHTML=temp;
+            }
+            fun(JSON.parse({{ recc | tojson}}))
+        </script>-->
+        <script>
+            const fruits=JSON.parse({{ recc | tojson}});
+            console.log(fruits);
+        </script>
+        {% endblock %}
+        <br>
+        <!--<img src='https://image.tmdb.org/t/p/w185/gC3tW9a45RGOzzSh6wv91pFnmFr.jpg'>-->
+    </body>
+</html>
